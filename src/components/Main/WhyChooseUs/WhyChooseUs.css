@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.why-choose-us {
+  padding: 60px 20px;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.topic-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.topic-option {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.topic-option:hover {
+  color: #f08804;
+}
+
+.topic-option input {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f08804;
+  margin-right: 10px;
+  position: relative;
+}
+
+.radio-custom::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+input:checked + .radio-custom::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.topic-details {
+  text-align: left;
+}
+
+.topic-details h3 {
+  font-size: 2rem;
+  color: #f08804;
+  margin-bottom: 20px;
+}
+
+.topic-details p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topic-image {
+  max-width: calc(50% - 10px);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.topic-details.fadeOut .topic-image,
+.topic-details.fadeOut h3,
+.topic-details.fadeOut p {
+  opacity: 0;
+}
+
+.topic-details.fadeIn .topic-image,
+.topic-details.fadeIn h3,
+.topic-details.fadeIn p {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .topic-details h3 {
+    font-size: 1.5rem;
+  }
+
+  .topic-details p {
+    font-size: 1rem;
+  }
+
+  .topic-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-us {
+    padding: 40px 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .topic-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .topic-details p {
+    font-size: 0.9rem;
+  }
+
+  .topic-option {
+    font-size: 1rem;
+  }
+
+  .radio-custom {
+    width: 18px;
+    height: 18px;
+  }
+
+  .radio-custom::before {
+    width: 8px;
+    height: 8px;
+  }
+}

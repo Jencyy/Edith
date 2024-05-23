@@ -1,0 +1,56 @@
+/* FeatureBox.css */
+.features-post {
+  position: relative;
+}
+
+.features-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: #000000;
+  color: aliceblue;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.features-content:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.features-content:hover h4{
+  color: #000000;
+}
+
+.features-content:hover a{
+  color: var(--accent-color);
+}
+.content-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.content-show i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.content-show h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.content-hide {
+    transition: all 0.1s;
+  overflow: hidden;
+}
+
+
+section.features .col-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
