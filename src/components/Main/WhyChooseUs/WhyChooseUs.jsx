@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './WhyChooseUs.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -68,7 +67,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="why-choose-us" id="why-choose-us">
+    <section className="why-choose-us mt-5" id="why-choose-us">
       <div className="container">
         <h2 className="section-title" data-aos="fade-up">
           Why Choose <span className='third-color'>E.D.I.T.S.H.</span>

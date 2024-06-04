@@ -26,8 +26,8 @@
 }
 
 .logo-img {
-    height: 50px; /* Adjust the height to fit your design */
-    width: auto;
+    height: auto; /* Adjust the height to fit your design */
+    width: 100px;
     background: none; /* Remove any background */
     border: none; /* Remove any border */
 }

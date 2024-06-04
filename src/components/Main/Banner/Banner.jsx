@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import './Banner.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import videoFile from '../../../assets/img/v.mp4'; // Adjust the path if necessary
+import './Banner.css';
 
 const Banner = () => {
   useEffect(() => {

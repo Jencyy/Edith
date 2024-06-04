@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-const Contact = ({ onSubmit }) => {
+const Contact = () => {
+  const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,8 +21,23 @@ const Contact = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
-    // Reset form
+    
+    // Validate form data (if needed)
+    // const errors = validate();
+    // if (Object.keys(errors).length > 0) {
+    //   setErrors(errors);
+    //   return;
+    // }
+
+    // Store form data in local storage
+    const storedData = JSON.parse(localStorage.getItem('contactFormData')) || [];
+    storedData.push(formData);
+    localStorage.setItem('contactFormData', JSON.stringify(storedData));
+
+    // Show success message
+    setSuccess(true);
+
+    // Reset form data
     setFormData({
       name: '',
       email: '',
@@ -31,10 +45,13 @@ const Contact = ({ onSubmit }) => {
       inquiryType: '',
       message: ''
     });
+
+    // Hide success message after a few seconds
+    setTimeout(() => setSuccess(false), 3000);
   };
 
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section mt-5" id="contact">
       <div className="container">
         <h2 className="section-title">Contact Us</h2>
         <div className="row contact-content">
@@ -50,7 +67,6 @@ const Contact = ({ onSubmit }) => {
                   onChange={handleChange}
                   placeholder="Enter your full name"
                   className="form-control"
-                  required
                 />
               </div>
               <div className="form-group">
@@ -63,7 +79,6 @@ const Contact = ({ onSubmit }) => {
                   onChange={handleChange}
                   placeholder="Enter your email address"
                   className="form-control"
-                  required
                 />
               </div>
               <div className="form-group">
@@ -76,7 +91,6 @@ const Contact = ({ onSubmit }) => {
                   onChange={handleChange}
                   placeholder="Enter your phone number"
                   className="form-control"
-                  required
                 />
               </div>
               <div className="form-group">
@@ -87,7 +101,6 @@ const Contact = ({ onSubmit }) => {
                   value={formData.inquiryType}
                   onChange={handleChange}
                   className="form-control"
-                  required
                 >
                   <option value="" disabled>Select inquiry type</option>
                   <option value="admission">Admission</option>
@@ -107,9 +120,10 @@ const Contact = ({ onSubmit }) => {
                   className="form-control"
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary btn-submit">
+              <button type="submit" className="btn btn-color btn-submit">
                 Send Message
               </button>
+              {success && <div className="alert alert-success mt-3">Message sent successfully!</div>}
             </form>
           </div>
           <div className="col-md-6 contact-map">

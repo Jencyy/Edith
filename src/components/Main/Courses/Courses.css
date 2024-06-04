@@ -6,15 +6,15 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  z-index: 1; /* Set a positive z-index */
+  z-index: 1;
   text-align: center;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative; /* Add position relative */
-  z-index: 2; /* Set a higher z-index */
+  position: relative;
+  z-index: 2; 
 }
 
 .black-cover {
@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 0; /* Set a lower z-index */
+  z-index: 0; 
 }
 
 .section-title {

@@ -1,6 +1,5 @@
 import React from 'react';
 import FeatureBox from './FeaturesBox/FeatureBox';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { faPencilAlt, faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 
 const Features = () => {

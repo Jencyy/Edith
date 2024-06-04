@@ -1,11 +1,10 @@
-.features-content {
-    transition: all 0.5s;
-}
-
-/* Global styles or index.css */
 @import "@fortawesome/fontawesome-svg-core/styles.css";
 
 
+
+.features-content {
+    transition: all 0.5s;
+}
 :root {
     --accent-color: #f08804;
 }

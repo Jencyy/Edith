@@ -7,11 +7,8 @@ import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
     return (
         <>
         
-            <Banner />
-            <Features />
-            <WhyChooseUs />
-            <Courses />
-            <Contact />
+        <Banner />
+        <Features />
         </>
     )
 }

@@ -8,7 +8,7 @@ import './Courses.css';
 const courses = [
   {
     id: 1,
-    title: 'Web Development',
+    title: 'Web Developer',
     description: 'Learn to build dynamic websites and applications with HTML, CSS, JavaScript, and modern frameworks.',
     duration: '6 months',
     icon: faCode,
@@ -16,7 +16,7 @@ const courses = [
   },
   {
     id: 2,
-    title: 'Full-Stack Development',
+    title: 'Full-Stack Developer',
     description: 'Master both front-end and back-end development to become a versatile developer.',
     duration: '9 months',
     icon: faLaptopCode,
@@ -24,7 +24,7 @@ const courses = [
   },
   {
     id: 3,
-    title: 'Mobile App Development',
+    title: 'Mobile App Developer',
     description: 'Develop mobile applications for both Android and iOS using modern technologies.',
     duration: '7 months',
     icon: faMobileAlt,
@@ -32,7 +32,7 @@ const courses = [
   },
   {
     id: 4,
-    title: 'Flutter Development',
+    title: 'Flutter Developer',
     description: 'Build high-performance, cross-platform mobile apps with Flutter.',
     duration: '5 months',
     icon: faFly,
@@ -40,7 +40,7 @@ const courses = [
   },
   {
     id: 5,
-    title: 'Android & iOS Development',
+    title: 'Android & iOS Developer',
     description: 'Specialize in native Android and iOS development to create robust mobile applications.',
     duration: '8 months',
     icon: faAndroid,
@@ -48,7 +48,7 @@ const courses = [
   },
   {
     id: 6,
-    title: 'UI/UX Design',
+    title: 'UI/UX Designer',
     description: 'Learn the principles of design and user experience to create stunning and intuitive interfaces.',
     duration: '4 months',
     icon: faPaintBrush,
@@ -56,7 +56,7 @@ const courses = [
   },
   {
     id: 7,
-    title: 'Graphics Design',
+    title: 'Graphics Designer',
     description: 'Master graphic design skills to create visual content for various platforms and media.',
     duration: '6 months',
     icon: faPalette,
@@ -84,10 +84,10 @@ const CourseCard = ({ course }) => (
 
 const Courses = () => {
   return (
-    <section className="courses-section" id="courses">
+    <section className="courses-section mt-5" id="courses">
       <div className="black-cover"></div>
       <div className="container">
-        <h2 className="section-title">Our Courses</h2>
+        <h2 className="section-title">We Trained</h2>
         <div className="courses-grid">
           {courses.map(course => (
             <CourseCard key={course.id} course={course} />
